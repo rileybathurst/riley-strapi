@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "styleguides",
+  "info": {
+    "singularName": "styleguide",
+    "pluralName": "styleguides",
+    "displayName": "styleguide"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "guide": {
+      "type": "richtext"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog.blog",
+      "inversedBy": "styleguides"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "styleguides"
+    }
+  }
+}
