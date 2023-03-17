@@ -31,6 +31,12 @@
       "relation": "manyToMany",
       "target": "api::styleguide.styleguide",
       "mappedBy": "tags"
+    },
+    "reference": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::reference.reference",
+      "inversedBy": "tags"
     }
   }
 }

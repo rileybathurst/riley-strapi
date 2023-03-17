@@ -44,6 +44,11 @@
       "relation": "manyToMany",
       "target": "api::styleguide.styleguide",
       "mappedBy": "blogs"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
     }
   }
 }

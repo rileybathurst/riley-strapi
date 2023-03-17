@@ -4,7 +4,8 @@
   "info": {
     "singularName": "styleguide",
     "pluralName": "styleguides",
-    "displayName": "styleguide"
+    "displayName": "styleguide",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -31,6 +32,15 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "styleguides"
+    },
+    "references": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reference.reference",
+      "mappedBy": "styleguide"
+    },
+    "direct_reference": {
+      "type": "string"
     }
   }
 }
