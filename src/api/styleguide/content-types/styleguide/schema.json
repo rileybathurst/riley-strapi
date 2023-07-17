@@ -41,6 +41,12 @@
     },
     "direct_reference": {
       "type": "string"
+    },
+    "check": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::check.check",
+      "inversedBy": "styleguides"
     }
   }
 }

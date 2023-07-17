@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nows",
+  "info": {
+    "singularName": "now",
+    "pluralName": "nows",
+    "displayName": "now"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

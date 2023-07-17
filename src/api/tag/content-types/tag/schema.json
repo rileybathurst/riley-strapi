@@ -37,6 +37,12 @@
       "relation": "manyToOne",
       "target": "api::reference.reference",
       "inversedBy": "tags"
+    },
+    "check": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::check.check",
+      "inversedBy": "tags"
     }
   }
 }
