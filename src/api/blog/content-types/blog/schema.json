@@ -25,13 +25,13 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::blog.blog",
-      "inversedBy": "referenced_blogs"
+      "mappedBy": "referenced_blogs"
     },
     "referenced_blogs": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::blog.blog",
-      "inversedBy": "blogs"
+      "mappedBy": "blogs"
     },
     "tags": {
       "type": "relation",

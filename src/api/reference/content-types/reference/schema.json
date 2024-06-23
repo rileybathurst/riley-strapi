@@ -24,13 +24,13 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tag.tag",
-      "mappedBy": "reference"
+      "mappedBy": "references"
     },
     "styleguide": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::styleguide.styleguide",
-      "inversedBy": "references"
+      "mappedBy": "references"
     }
   }
 }

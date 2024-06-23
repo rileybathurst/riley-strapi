@@ -23,12 +23,6 @@
       "target": "api::tag.tag",
       "mappedBy": "check"
     },
-    "styleguides": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::styleguide.styleguide",
-      "mappedBy": "check"
-    },
     "slug": {
       "type": "string"
     }

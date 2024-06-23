@@ -25,28 +25,22 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::blog.blog",
-      "inversedBy": "styleguides"
+      "mappedBy": "styleguides"
     },
     "tags": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::tag.tag",
-      "inversedBy": "styleguides"
+      "mappedBy": "styleguides"
     },
     "references": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::reference.reference",
-      "mappedBy": "styleguide"
+      "mappedBy": "styleguides"
     },
     "direct_reference": {
       "type": "string"
-    },
-    "check": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::check.check",
-      "inversedBy": "styleguides"
     }
   }
 }
