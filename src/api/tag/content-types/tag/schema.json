@@ -34,13 +34,13 @@
     },
     "reference": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::reference.reference",
-      "mappedBy": "tags"
+      "mappedBy": "references"
     },
     "check": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::check.check",
       "mappedBy": "tags"
     }

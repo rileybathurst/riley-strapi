@@ -19,9 +19,9 @@
     },
     "tags": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::tag.tag",
-      "mappedBy": "check"
+      "mappedBy": "tags"
     },
     "slug": {
       "type": "string"
