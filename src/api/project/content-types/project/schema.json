@@ -41,12 +41,6 @@
     "finish": {
       "type": "date"
     },
-    "trades": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::trade.trade",
-      "mappedBy": "projects"
-    },
     "excerpt": {
       "type": "string"
     }

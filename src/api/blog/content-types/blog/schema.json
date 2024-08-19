@@ -21,30 +21,6 @@
     "article": {
       "type": "richtext"
     },
-    "blogs": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::blog.blog",
-      "mappedBy": "referenced_blogs"
-    },
-    "referenced_blogs": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::blog.blog",
-      "mappedBy": "blogs"
-    },
-    "tags": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::tag.tag",
-      "mappedBy": "blogs"
-    },
-    "styleguides": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::styleguide.styleguide",
-      "mappedBy": "blogs"
-    },
     "seo": {
       "type": "component",
       "repeatable": true,

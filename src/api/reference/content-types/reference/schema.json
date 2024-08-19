@@ -4,7 +4,8 @@
   "info": {
     "singularName": "reference",
     "pluralName": "references",
-    "displayName": "reference"
+    "displayName": "reference",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,18 +20,6 @@
     },
     "link": {
       "type": "string"
-    },
-    "tags": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::tag.tag",
-      "mappedBy": "references"
-    },
-    "styleguide": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::styleguide.styleguide",
-      "mappedBy": "references"
     }
   }
 }

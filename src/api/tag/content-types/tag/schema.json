@@ -15,34 +15,10 @@
     "name": {
       "type": "string"
     },
-    "blogs": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::blog.blog",
-      "mappedBy": "tags"
-    },
     "slug": {
       "type": "string",
       "regex": "^[a-z0-9\\-]*$",
       "unique": true
-    },
-    "styleguides": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::styleguide.styleguide",
-      "mappedBy": "tags"
-    },
-    "reference": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::reference.reference",
-      "mappedBy": "references"
-    },
-    "check": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::check.check",
-      "mappedBy": "tags"
     }
   }
 }

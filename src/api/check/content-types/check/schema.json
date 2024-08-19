@@ -4,7 +4,8 @@
   "info": {
     "singularName": "check",
     "pluralName": "checks",
-    "displayName": "check"
+    "displayName": "check",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,12 +17,6 @@
     },
     "description": {
       "type": "richtext"
-    },
-    "tags": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::tag.tag",
-      "mappedBy": "tags"
     },
     "slug": {
       "type": "string"
