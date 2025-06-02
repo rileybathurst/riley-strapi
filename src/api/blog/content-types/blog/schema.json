@@ -16,18 +16,22 @@
       "type": "string"
     },
     "slug": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "^[a-z0-9_-]+$"
     },
     "article": {
       "type": "richtext"
     },
-    "seo": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.seo"
-    },
     "excerpt": {
       "type": "string"
+    },
+    "tools": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tool.tool",
+      "inversedBy": "blogs"
     }
   }
 }
