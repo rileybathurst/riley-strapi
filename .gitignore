@@ -112,3 +112,14 @@ exports
 *.cache
 build
 .strapi-updater.json
+
+############################
+# Yarn
+############################
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

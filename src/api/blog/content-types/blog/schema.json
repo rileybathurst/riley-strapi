@@ -25,7 +25,10 @@
       "type": "richtext"
     },
     "excerpt": {
-      "type": "string"
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 160,
+      "required": true
     },
     "tools": {
       "type": "relation",

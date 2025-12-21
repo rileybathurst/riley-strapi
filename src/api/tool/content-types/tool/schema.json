@@ -19,6 +19,24 @@
       "relation": "manyToMany",
       "target": "api::blog.blog",
       "mappedBy": "tools"
+    },
+    "in": {
+      "type": "date"
+    },
+    "out": {
+      "type": "date"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "mappedBy": "tools"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "thoughts": {
+      "type": "blocks"
     }
   }
 }

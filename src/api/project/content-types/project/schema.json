@@ -26,14 +26,11 @@
         "audios"
       ]
     },
-    "markdown": {
-      "type": "richtext"
-    },
     "slug": {
       "type": "string",
-      "regex": "^[a-z0-9\\-]*$",
+      "required": true,
       "unique": true,
-      "required": true
+      "regex": "^[a-z0-9\\-]*$"
     },
     "start": {
       "type": "date"
@@ -42,6 +39,42 @@
       "type": "date"
     },
     "excerpt": {
+      "type": "string"
+    },
+    "embed": {
+      "type": "text"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "personal": {
+      "type": "blocks"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "projects"
+    },
+    "platforms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::platform.platform",
+      "mappedBy": "projects"
+    },
+    "tools": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tool.tool",
+      "inversedBy": "projects"
+    },
+    "trades": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::trade.trade",
+      "inversedBy": "projects"
+    },
+    "link": {
       "type": "string"
     }
   }
