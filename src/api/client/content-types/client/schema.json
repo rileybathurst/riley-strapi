@@ -47,6 +47,18 @@
       "relation": "oneToMany",
       "target": "api::project.project",
       "mappedBy": "client"
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "addressCountry": {
+      "type": "string"
+    },
+    "addressLocality": {
+      "type": "string"
+    },
+    "addressRegion": {
+      "type": "string"
     }
   }
 }

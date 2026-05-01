@@ -502,6 +502,37 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBudgetBudget extends Struct.CollectionTypeSchema {
+  collectionName: 'budgets';
+  info: {
+    displayName: 'budget';
+    pluralName: 'budgets';
+    singularName: 'budget';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::budget.budget'
+    > &
+      Schema.Attribute.Private;
+    order: Schema.Attribute.Integer;
+    price: Schema.Attribute.Integer;
+    publishedAt: Schema.Attribute.DateTime;
+    service: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCheckCheck extends Struct.CollectionTypeSchema {
   collectionName: 'checks';
   info: {
@@ -542,12 +573,16 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    addressCountry: Schema.Attribute.String;
+    addressLocality: Schema.Attribute.String;
+    addressRegion: Schema.Attribute.String;
     alive: Schema.Attribute.Boolean;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     current: Schema.Attribute.Boolean;
     description: Schema.Attribute.String;
+    excerpt: Schema.Attribute.String;
     finish: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -757,7 +792,9 @@ export interface ApiStyleguideStyleguide extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.String;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1360,6 +1397,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
       'api::blog.blog': ApiBlogBlog;
+      'api::budget.budget': ApiBudgetBudget;
       'api::check.check': ApiCheckCheck;
       'api::client.client': ApiClientClient;
       'api::image-grab.image-grab': ApiImageGrabImageGrab;
