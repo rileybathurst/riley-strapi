@@ -584,6 +584,7 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.String;
     excerpt: Schema.Attribute.String;
     finish: Schema.Attribute.Date;
+    hero: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -591,6 +592,7 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
+    order: Schema.Attribute.Integer;
     projects: Schema.Attribute.Relation<'oneToMany', 'api::project.project'>;
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.String;

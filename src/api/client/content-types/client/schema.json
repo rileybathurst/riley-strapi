@@ -59,6 +59,19 @@
     },
     "addressRegion": {
       "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "hero": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
